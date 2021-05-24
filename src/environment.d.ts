@@ -15,6 +15,9 @@ declare global {
       STRIPE_PRIVATE_KEY: string;
       STRIPE_SIGNING_SECRET: string;
       HOST: string;
+
+      FIREBASE_PRIVATE_KEY: string;
+      FIREBASE_CLIENT_EMAIL: string;
     }
   }
 }

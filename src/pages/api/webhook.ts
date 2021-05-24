@@ -1,13 +1,13 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { buffer } from "micro";
 import admin from "firebase-admin";
-import permissions from "lib/permissions.json";
+import { clientEmail, privateKey, projectId } from "lib/permissions";
 import Stripe from "stripe";
 
 const serviceAccount: admin.ServiceAccount = {
-  clientEmail: permissions.client_email,
-  privateKey: permissions.private_key,
-  projectId: permissions.project_id,
+  clientEmail,
+  privateKey,
+  projectId,
 };
 
 const app = !admin.apps.length
